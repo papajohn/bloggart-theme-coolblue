@@ -5,14 +5,7 @@
 <div class="post">
   <div class="right">
     <h2><a href="{{config.url_prefix}}{{post.path}}">{{post.title|escape}}</a></h2>
-    <p class="post-info">
-      {% if post.tags %}
-        Filed under
-        {% for tag in post.tag_pairs %}
-          <a href="{{config.url_prefix}}/tag/{{tag.1|escape}}">{{tag.0|escape}}</a>{% if not forloop.last %},{% endif %}
-        {% endfor %}
-      {% endif %}
-    </p>
+    <br>
     {{post.summary}}
     <p class="postmeta">
       <a href="{{config.url_prefix}}{{post.path}}" class="readmore">Read more</a>
