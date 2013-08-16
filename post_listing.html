@@ -1,0 +1,23 @@
+<div class="post">
+  <div class="right">
+    <h2><a href="{{config.url_prefix}}{{post.path}}">{{post.title|escape}}</a></h2>
+    <br>
+    {% if use_summaries %}
+      {{post.summary}}
+    {% else %}
+      {{post.rendered}}
+    {% endif %}
+    <p class="postmeta">
+      {% if use_summaries %}
+        <a href="{{config.url_prefix}}{{post.path}}" class="readmore">Read more</a> |
+      {% endif %}
+      {% if config.disqus_forum %}
+        <a href="{{config.url_prefix}}{{post.path}}#disqus_thread" class="readmore">Comments</a>
+      {% endif %}
+    </p>
+  </div><!-- right-->
+
+  <div class="left">
+    {% include "post_meta.html" %}
+  </div><!-- left -->
+</div><!-- post -->

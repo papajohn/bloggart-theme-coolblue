@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{config.blog_name}}{% endblock %}
+{% block body %}
+
+<div class="post">
+  <div class="right">
+    <p>
+      <a href="http://research.google.com">Google Research Scientist</a> working on
+      <a href="http://translate.google.com">Google Translate</a>, 
+      <a href="http://research.google.com/pubs/NaturalLanguageProcessing.html">natural language processing</a>, and 
+      <a href="http://www.google.com/edu/index.html">computer science education</a>.
+      See <a href="/tag/publication">my publications</a> 
+      or read more <a href="/2011/01/About-Me">about me</a>.
+    </p>
+    <table border="0" cellspacing="0" cellpadding="8">
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td><img src="/content/misc/papajohn_at_gmail.png" /></td>
+        <td><strong>Address:</strong></td>
+        <td rowspan="2">1350 Charleston Road<br>Mountain View, CA<br>94043<br>
+          <a href="http://maps.google.com/maps?q=1350+charleston&ie=UTF8&hq=&hnear=1350+Charleston+Rd,+Mountain+View,+Santa+Clara,+California+94043&gl=us&t=h&z=16&iwloc=A">map</a> | 
+          <a href="http://maps.google.com/maps?q=1350+charleston&ie=UTF8&hq=&hnear=1350+Charleston+Rd,+Mountain+View,+Santa+Clara,+California+94043&gl=us&t=h&z=16&iwloc=A&f=d">directions</a> </td>
+      </tr>
+      <tr>
+        <td><strong>Phone:</strong></td>
+        <td><img src="/content/misc/phone_number.png" /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="left">
+    <a href="https://plus.google.com/108482761700577338808/posts">
+      <img src="/content/misc/john_headshot.png" />
+    </a>
+    <g:plusone></g:plusone>
+  </div>
+</div>
+
+<div class="feature">
+  <h2 class="feature_title">
+    <a href="{{config.url_prefix}}{{feature.path}}">Featured: {{feature.title|escape}}</a>
+  </h2>
+  <br>
+  {{feature.summary}}
+</div>
+
+<br>
+<h2>Recent Updates:</h2>
+<br>
+{% for post in posts %}
+  {% include "post_listing.html" %}
+{% endfor %}
+
+{% endblock %}

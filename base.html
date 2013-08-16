@@ -23,8 +23,9 @@
 		<p id="slogan">{{config.slogan}}</p>
 		<div  id="nav">
 			<ul>
-				<li{% ifequal generator_class "IndexContentGenerator" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/">Home</a></li>
+				<li{% ifequal generator_class "HomeContentGenerator" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/">Home</a></li>
         <li{% ifequal resource "publication" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/tag/publication">Publications</a></li>
+				<li{% ifequal generator_class "IndexContentGenerator" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/posts">All Posts</a></li>
         <li{% ifequal post.title "About Me" %} id="current"{% endifequal %}><a href="{{config.url_prefix}}/2011/01/About-Me">About Me</a></li>
         {% block menu %}{% endblock %}
 			</ul>
@@ -80,6 +81,8 @@
   var pageTracker = _gat._getTracker("{{config.analytics_id}}");
   pageTracker._trackPageview();
   } catch(err) {}</script>
+
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 {% endif %}
 </body>
 </html>

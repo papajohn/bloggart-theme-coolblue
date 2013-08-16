@@ -7,15 +7,16 @@
   <br>
   {{post.rendered}}
   <p class = "postmeta">
+    <g:plusone></g:plusone>
     {% if prev %}
-      <a id="prev" href="{{config.url_prefix}}{{prev.path}}">Previous Post</a>
+    &nbsp;|&nbsp;<a id="prev" href="{{config.url_prefix}}{{prev.path}}">Previous Post</a>
     {% endif %}
     {% if next %}
-      | <a id="next" href="{{config.url_prefix}}{{next.path}}">Next Post</a>
+    &nbsp;|&nbsp;<a id="next" href="{{config.url_prefix}}{{next.path}}">Next Post</a>
     {% endif %}
     {% if post.tags %}
       {% for tag in post.tag_pairs %}
-        | <a href="{{config.url_prefix}}/tag/{{tag.1|escape}}">{{tag.0|escape|title}} Posts</a>
+      &nbsp;|&nbsp;<a href="{{config.url_prefix}}/tag/{{tag.1|escape}}">{{tag.0|escape|title}} Posts</a>
       {% endfor %}
     {% endif %}
   </p>

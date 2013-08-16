@@ -70,9 +70,6 @@ p, dl { margin: 10px 25px; }
 
 /* images */
 img {
-   background: #F3F4F5;
-   border: 1px solid #E2E4E7;
-	padding: 10px;
 }
 img.float-right {	margin: 5px 0px 10px 10px; }
 img.float-left { margin: 5px 10px 10px 0px; }
@@ -118,10 +115,14 @@ table {
 	border-collapse: collapse;
 	margin: 10px 25px;
 }
-tr { background: #FFF; }
+tr { 
+  background: #FFF; 
+  vertical-align: middle;
+}
 th, td {
 	text-align: left;
-	border-width: 1px;
+  vertical-align: middle;
+	border-width: 0px;
   	border-style: solid;
 }
 th {
@@ -220,12 +221,12 @@ input.button {
 	font-weight: bold;
 	font-size: 11px;
 	line-height: 1.8em;
-	font-style: normal;
+	font-style: italic;
 	letter-spacing: -.5px;
 	color: #0d6684;
 
 	/* change the values of top and left to adjust the position */
-	top: 145px; left: 30px;
+	top: 80px; left: 250px;
 }
 
 /* RSS */
@@ -309,9 +310,9 @@ fieldset.search {
 #header #nav ul li a {
 	float:left;
 	margin: 0;
-	padding: 0 15px 24px 15px;
+	padding: 0 15px 22px 15px;
 	color: #baa7a7;
-	font: bold 12px 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+	font: bold 14px 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
 }
 #header #nav ul li a:hover,
 #header #nav ul li a:active {
@@ -357,7 +358,7 @@ fieldset.search {
 #main h2 {
 	font: bold 2.2em/1em 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
    color: #333;
-	letter-spacing: -2.0px;
+	letter-spacing: -1.0px;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
@@ -394,7 +395,6 @@ fieldset.search {
    color: #33799B;
 	padding-left: 0;
 	font-weight: bold;
-   text-transform: uppercase;
 }
 .sidemenu ul li a span {
 	color: #959595;
@@ -604,7 +604,6 @@ ul.subscribe-stuff li img {
    padding: 0 0 20px 0;
    width: 740px;
    overflow: hidden;
-   border-bottom: 1px solid #eee;
 }
 .right {
 	width: 560px;
@@ -906,9 +905,27 @@ ul.archive li .post-details a:visited {
 	content: " ";
 }
 
-/* publications */
+/* ----------------
+    J O H N
+------------------- */
+
 .publication {
-  margin: 15px 0px 20px 0px;
-  border-left: 8px solid #F1F1F1;
-  padding-left: 12px;
+  margin: 20px 25px;
+}
+
+.feature {
+  border-radius: 18px;
+  -moz-border-radius: 18px;
+  border: 2px solid #3686B6;
+  margin: 20px 0px 20px 0px;
+  width: 650px;
+  padding: 0px 20px 20px 20px;
+}
+
+h2.feature_title {
+  position: relative;
+  top: -16px;
+  padding: 0px 8px 0px 12px;
+  background-color: #FFFFFF;
+  display: inline;
 }
